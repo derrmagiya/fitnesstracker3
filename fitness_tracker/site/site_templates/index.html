@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <!-- Header Section -->
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>Get Fit and Stay Healthy with our Fitness Tracker!</h2>
+            <h5>Track your workouts, set goals, and achieve your fitness targets.</h5>
+            <div>
+                <button class="btn btn-primary">Get Started</button>
+                <button class="btn btn-primary">Learn More</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <img class="header-image" src="../../static/images/FITNESSTRACKERIMAGE.png" alt="Fitness Tracker Image">
+        </div>
+    </header>
+    <!-- End of Header Section -->
+
+    <!-- Start Middle Section -->
+
+    <!-- Collection of Features Section -->
+    <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/TRACKDAILY.jpg" alt="Tracking Image">
+            <h4>Activity Tracking</h4>
+            <p>
+                Monitor your daily activities, including steps, distance, and calories burned.
+            </p>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/WORKOUTLOGGER.png" alt="Workout Image">
+            <h4>Workout Logging</h4>
+            <p>
+                Log your workouts and track progress in real-time, from running to weightlifting.
+            </p>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/GOALS.png" alt="Goals Image">
+            <h4>Personalized Goals</h4>
+            <p>
+                Set customized fitness goals and receive motivation to achieve them.
+            </p>
+        </div>
+    </section>
+    <!-- End of Collection Features -->
+
+    <!-- Community Section -->
+    <section class="row">
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/COMMUNITYFITNESS.png" alt="Community Image" id="community-image">
+        </div>
+        <div class="col-12 col-md-6">
+            <h4>Join Our Fitness Community</h4>
+            <p>
+                Connect with fitness enthusiasts from around the world. Share your progress, tips, and
+                participate in challenges to stay motivated.
+            </p>
+            <div>
+                <button class="btn btn-primary">Join Community</button>
+                <button class="btn btn-primary">Download App</button>
+            </div>
+        </div>
+    </section>
+    <!-- End of Community Section -->
+
+    <!-- Footer Section -->
+    <footer class="row" id="footer">
+        <div class="col-2">
+            <img src="../../static/images/FITNESSLOGO1.png" alt="Fitness Tracker Logo" id="footer-logo">
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>About Us</h4>
+                <p>Our Mission</p>
+                <p>Team</p>
+                <p>Testimonials</p>
+                <p>Contact</p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Features</h4>
+                <p>Activity Tracking</p>
+                <p>Workout Logging</p>
+                <p>Personalized Goals</p>
+                <p>Community</p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Resources</h4>
+                <p>Blog</p>
+                <p>FAQ</p>
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Connect</h4>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+                <p>LinkedIn</p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Subscribe</h4>
+                <p>Stay up-to-date with our latest news and updates.</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</div>
+
+{% endblock content %}

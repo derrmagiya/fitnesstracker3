@@ -1,0 +1,1 @@
+gunicorn 'fitness_tracker:app'

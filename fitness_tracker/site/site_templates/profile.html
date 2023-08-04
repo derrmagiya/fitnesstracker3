@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Flask Flash Message to User -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == 'auth-success' %}
+                <div class="container">
+                    {{ msg }}
+                    <button type="button" class="close" data-dismiss="alert" onclick="this.parentElement.style.display='none'">&times</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+<header class="hero-section">
+    <h3 class="header-text">Welcome to Your Fitness Tracker! {{ current_user.username }}</h3>
+    <main class="container fitness_form">
+        <div class="row">
+            <aside class="col-12 col-md-6">
+                <h2>Create a Fitness!</h2>
+                {% include 'fitnessform.html' %}
+            </aside>
+        </div>
+    </main>
+</header>
+
+<div class="container">
+    <h3>Here is your profile</h3>
+    <ul class="list-group">
+        <li class="list-group-item">Email: {{ current_user.email }}</li>
+        <li class="list-group-item">Token: {{ current_user.token }}</li>
+    </ul>
+    <div class="row">
+        {% for fitness in fitnesses %}
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?cs=srgb&dl=action-athlete-barbell-841130.jpg&fm=jpg" class="card-img-top" alt="workout">
+                <div class="card-body">
+                    <h5 class="card-title">{{ fitness.exercise }}</h5>
+                    <p class="card-text">{{ fitness.description }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">C{{ fitness.duration }}</li>
+                    <li class="list-group-item">{{ fitness.distance }}</li>
+                    <li class="list-group-item">{{ fitness.random_joke }}</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Update Fitness</a>
+                    <a href="#" class="card-link">Delete Fitness</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

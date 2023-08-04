@@ -1,0 +1,51 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group"></div>
+        <fieldset class="exercise-field">
+            {{ form.exercise.label }}
+            {{ form.exercise(class='form-control', placeholder='Exercise') }}
+        </fieldset>
+        <fieldset class="desription-field">
+            {{ form.description.label }}
+            {{ form.description(class='form-control', placeholder='Description') }}
+        </fieldset>
+        <fieldset class="duration-field">
+            {{ form.duration.label }}
+            {{ form.duration(class='form-control', placeholder='Duration (minutes)') }}
+        </fieldset>
+        <fieldset class="calories-field">
+            {{ form.calories_burned.label }}
+            {{ form.calories_burned(class='form-control', placeholder='Calories Burned') }}
+        </fieldset>
+        <fieldset class="distance-field">
+            {{ form.distance.label }}
+            {{ form.distance(class='form-control', placeholder='Distance (miles)') }}
+        </fieldset>
+        <fieldset class="heart_rate-field">
+            {{ form.heart_rate.label }}
+            {{ form.heart_rate(class='form-control', placeholder='Heart Rate (bpm)') }}
+        </fieldset>
+        <fieldset class="steps-field">
+            {{ form.steps.label }}
+            {{ form.steps(class='form-control', placeholder='Steps') }}
+        </fieldset>
+        <fieldset class="workout_date-field">
+            {{ form.workout_date.label }}
+            {{ form.workout_date(class='form-control', placeholder='Workout Date') }}
+        </fieldset>
+        <fieldset class="workout_time-field">
+            {{ form.workout_time.label }}
+            {{ form.workout_time(class='form-control', placeholder='Workout Time') }}
+        </fieldset>
+        <fieldset class="notes-field">
+            {{ form.notes.label }}
+            {{ form.notes(class='form-control', placeholder='Notes') }}
+        </fieldset>
+        <fieldset class="joke-field">
+            {{ form.random_joke.label }}
+            {{ form.random_joke(class='form-control', placeholder='Random Joke') }}
+        </fieldset>
+
+        {{ form.submit_button(class='btn btn-primary btn-block mt-2')}}
+    </div>
+</form>
